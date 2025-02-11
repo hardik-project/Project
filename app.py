@@ -8,7 +8,7 @@ from sklearn.preprocessing import LabelEncoder
 from tensorflow import keras
 import math
 import base64
-
+import re
 ####################################################        ANN         ################################################################
 ######################################      Loading Datset      ###########################################
 
@@ -31,6 +31,10 @@ replacement_dict = {
     'Fourth Owner Or More' : 4
 }
 df['owner_level'] = df['owner'].replace(replacement_dict)
+def clean_model_name(model_name):
+    return re.sub(r"\b\d+cc\b|\b\d+\b", "", model_name).strip()
+    
+df["cleaned_model"] = df["bike_name"].apply(clean_model_name)
 
 ####################################################        CNN         ################################################################
 # Constants
@@ -194,13 +198,12 @@ elif option == "ANN":
 
     selected_df = df[df['brand']==brand]
 
-    Model = st.selectbox('Model :',  selected_df.bike_name.unique())
+    Model = st.selectbox('Model :',  selected_df.cleaned_model.unique())
 
     ####################################    power  ##################################################
 
-    Power_df = df[df['bike_name'] == Model]
-    power_lvl = Power_df.power.unique().astype(int)
-    power_lvl.sort()
+    Power_df = df[df['cleaned_model'] == Model]
+    power_lvl = Power_df.power.sort_values().unique().astype(int)
     power = st.selectbox("Model's Power :",  power_lvl)
 
     #########################################    city  ##################################################
