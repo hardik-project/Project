@@ -250,7 +250,7 @@ elif option == "ANN":
 
     ########################################      Adjusting inputs    ################################################
 
-    bike_input = int(df[df['bike_name'] == Model]['bike_id'].unique())
+    bike_input = int(df[df['cleaned_model'] == Model]['bike_id'].unique())
     city_input = int(df[df['city'] == city]['city_id'].unique())
     brand_input = int(df[df['brand'] == brand]['brand_id'].unique())
     ownership_input = int(df[df['owner'] == owner]['owner_level'].unique())
