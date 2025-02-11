@@ -116,7 +116,7 @@ if option == "Home":
             return base64.b64encode(img_file.read()).decode()
 
     st.divider()
-    st.text("Connect with me ...")
+    st.text("Click to connect with me ...")
     
     # Convert images to Base64
     hacker_rank_img = get_base64_image("Images/icons/HackerRank.png")
