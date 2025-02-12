@@ -173,8 +173,7 @@ elif option == "INFO":
         st.header('Loss')
         st.image('Images/CatVsDog/Loss_cd.png')
         st.divider()
-        st.header('Confusion Matrix - Testing data')
-        st.image('Images/Bike/Feature_importance.png')  # change it to confusion matrix
+
 
 elif option == "ANN":
 
