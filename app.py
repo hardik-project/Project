@@ -205,7 +205,7 @@ elif option == "ANN":
 
     Power_df = df[df['cleaned_model'] == Model]
     power_lvl = Power_df.power.sort_values().unique().astype(int)
-    power = st.selectbox("Model's Power :",  power_lvl)
+    power = st.selectbox("Engine's Power :",  power_lvl)
 
     #########################################    city  ##################################################
 
