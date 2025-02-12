@@ -105,9 +105,11 @@ option = st.sidebar.selectbox("Choose a view:", ["Home","INFO", "ANN","CNN"])
 
 if option == "Home":
 
-    st.title("Welcome to Project Portfolio")
+    st.title("🚀 Welcome to My Project Portfolio!")
     st.sidebar.success("Select a page from the sidebar.")
-    st.header('created by Hardik Patil (Data Enthusiast)')
+    st.header('Created by Hardik Patil (Data Enthusiast)')
+    st.markdown("Here, you'll find a collection of my data-driven projects, showcasing my skills in **machine learning**, **deep learning**, and **analytics**. From exploring patterns 📊 to **building AI models** 🤖, each project reflects my passion for turning data into insights.\n✨ Let’s dive into the world of data! 🚀")
+
     st.write("This is the main app page. Use the sidebar to navigate between pages.")
 
 
