@@ -107,7 +107,7 @@ if option == "Home":
 
     st.title("Welcome to Project Portfolio")
     st.sidebar.success("Select a page from the sidebar.")
-
+    st.header('created by Hardik Patil (Data Enthusiast)')
     st.write("This is the main app page. Use the sidebar to navigate between pages.")
 
 
